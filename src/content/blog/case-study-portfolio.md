@@ -23,9 +23,9 @@ Next was for me to figure out what I do I want to make 3D?
 ## [GREASE PENCIL? 🤔]
 Yep you read that right! Grease pencil is a special object in Blender that allows you to draw in a 3D space. This object acts like any other object in blender, which means you can edit, animate, apply textures, and many other things. I was pretty anxious to try something like this since my Blender experience is kind of... lacking. So what's the best way to jump into learning? Youtube!
 
-I mainly watched a 2 part series on youtube to learn more about grease pencil and tried to concoct something of my own. To stick close to my theme gaming and simple, I thought creating a gameboy (and calling it DevBoy) with technologies floating it, and animating it would do for a nice eye-catching hero. (It seems overwhelming, but trust me, as a Blender newbie, even I was able to make something.)
+I mainly watched a 2 part series on youtube to learn more about grease pencil and tried to concoct something of my own. To stick close to my theme gaming and simple, I thought creating a gameboy (and calling it DevBoy) with technologies floating it, and animating it would do for a nice eye-catching hero. (It seems overwhelming, but trust me, as a Blender newbie, even I was able to make something. It was just real tedious.)
 
 ![This is a placeholder image description](/placeholder-social.jpg)
 *Rough draft and line art of DevBoy*
 
-### [PROBLEMS]
+ 
