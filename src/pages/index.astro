@@ -1,0 +1,72 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<style lang="scss">
+	ul {
+		list-style: none;
+		padding-left: 0;
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	li {
+		border: 1px solid #fff;
+		padding: 8px;
+		transition: all .3s ease;
+
+		&:hover {
+			background-color: #fff;
+			a {
+				color: #000;
+			}
+		}
+
+		time {
+			font-size: 12px;
+		}
+
+		a {
+			display: block;
+			transition: all .3s ease;
+			text-decoration: none;
+		}
+	}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>dive into my brain 👁👄👁</h1>
+			<ul>
+				{
+					posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.slug}/`}>
+								<img src={post.data.heroImage} alt="" />
+								<FormattedDate date={post.data.pubDate} />
+								<div>{post.data.title}</div>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

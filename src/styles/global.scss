@@ -1,0 +1,79 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+$primary-color: #F7FBFF;
+$secondary-color: #111;
+
+body {
+	font-family: 'IBM Plex Mono', monospace;
+	margin: auto;
+	padding: 20px;
+	max-width: 768px;
+	text-align: left;
+	background-color: $secondary-color;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: $primary-color;
+	font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	color: $primary-color;
+}
+a {
+	color: $primary-color;
+}
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 14px;
+}
+input {
+	font-size: 14px;
+}
+content {
+	line-height: 1.6;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+img + em {
+	display: flex;
+	justify-content: center;
+}
+
+code {
+	padding: 2px 5px;
+	color: $secondary-color;
+	background-color: $primary-color;
+}
+pre {
+	padding: 1rem;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border: 1px solid #999;
+	color: $primary-color;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}
