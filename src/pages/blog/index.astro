@@ -11,43 +11,61 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
+<style lang="scss">
+	ul {
+		list-style: none;
+		padding-left: 0;
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	li {
+		border: 1px solid #fff;
+		padding: 8px;
+		transition: all .3s ease;
+
+		&:hover {
+			background-color: #fff;
+			a {
+				color: #000;
+			}
+		}
+
+		time {
+			font-size: 12px;
+		}
+
+		a {
+			display: block;
+			transition: all .3s ease;
+			text-decoration: none;
+		}
+	}
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style lang="scss">
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
 	</head>
 	<body>
-		<Header />
+		<Header title={SITE_TITLE} />
 		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
+			<h1>dive into my brain 👁👄👁</h1>
+			<ul>
+				{
+					posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.slug}/`}>
+								<img src={post.data.heroImage} alt="" />
 								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+								<div>{post.data.title}</div>
+							</a>
+						</li>
+					))
+				}
+			</ul>
 		</main>
 		<Footer />
 	</body>
