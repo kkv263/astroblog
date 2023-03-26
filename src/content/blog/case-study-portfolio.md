@@ -2,10 +2,10 @@
 title: "3D Portfolio: Case Study"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Mar 21 2023"
-heroImage: "/placeholder-hero.jpg"
+heroImage: "/hero.png"
 ---
 
-## [OUT OF DATE]
+## [INTRO: DUSTING OFF THE PORTFOLIO]
 It has certainly been a while since I've last thought about updating my portfolio. The last portfolio I worked on for myself was in 2018 (5 years ago, yikes!). Over the years I have learned so much about front end development that it was probably about time to create a new portfolio for myself.
 
 ## [INSPIRATION AND FOCUS]
@@ -25,29 +25,33 @@ Yep you read that right! Grease pencil is a special object in Blender that allow
 
 I mainly watched a 2 part series on youtube to learn more about grease pencil and tried to concoct something of my own. To stick close to my theme of gaming and simple, I thought creating a gameboy (and calling it DevBoy) with technologies floating it, and animating it would do for a nice eye-catching hero. (It seems overwhelming, but trust me, as a Blender newbie, even I was able to make something. It was just real tedious.)
 
-![This is a placeholder image description](/placeholder-social.jpg)
+![lineart of gameboy](/gameboyline.png)
 *Rough draft and line art of DevBoy*
 
 However, drawing and animating this was not all sunshine and rainbows. Initially I wanted to showcase the gameboy rotating a full 360, where you would be able to see all sides of the object and interact with it. Because a real gameboy is not fully flat and is curved in the bottom right corner, I was not able to replicate that at all. This was not rendered in threejs and I decided to animate + make this a looping video.
 
 The layers being see through. To my understanding, this is because the layers are set traditionally as 2d layers (the same kind of layers you would find in photoshop) where the layers are ordered top to bottom, foreground to background. A 3D layer settings exist, but with the way I built out the gameboy, I would've had to start from scratch... So, because of those issues, the entire right side is missing. I had to compromise and animate one side of the gameboy (which is not bad, but could've been better).
 
-![This is a placeholder image description](/placeholder-social.jpg)
+![Drawing of gameboy showcasing missing right side](/gameboyright.png)
 *The entire right side is missing*
 
 ## [YEAH, I'VE GOT SKILLS]
-If the hero, wasn't going to use threejs, surely the skills section would? You betcha! Instead of placing a list squares on the page, how about a list of 3d objects instead 😏. Reading through documentation, I generated a number of icosahedrons (i know, a mouthful) on the page and slapped some technology logos on it. After looking through the documentation, it was so much easier than I thought! Although in the future, I still need to revisit some topics, since I did place some random values into some attributes & properties until it looked right.
+If the hero, wasn't going to use threejs, surely the skills section would? You betcha! Instead of placing a list squares on the page, how about a list of 3d objects instead 😏. Reading through documentation, I generated a number of icosahedrons (i know, a mouthful) on the page and slapped some technology logos on it. 
 
-![This is a placeholder image description](/placeholder-social.jpg)
+Even though the idea was simple, executing this was another big part of the journey. When I attempted to load each skill on its own canvas, I found out about WebGL limits and that some browsers / devices can't load very many canvas's (canvasi?). I ended up finding out when I previewed the site on my phone, and it was not loading half of the shapes I wanted. 
+
+I had wanted for the user to be able to control and rotate any shape, but I had to sacrifice that. However, that sacrifice was not in vain! I learned how to properly load and space each skill on one canvas and it led me to pickup information on orthogonal cameras on the way. To me, learning is always a plus!
+
+![Portfolio skills section showing 12 isosahedrons](/skills.png)
 *Skills section*
 
-Overall, this section was not bad and can be considered "done". But there is something that can always be made better. For example, resetting each ball to it's original position after the user has moved away or stopped interacting with it.
+Overall, this section was not bad and can be considered "done". But there is something that can always be made better. I'm dissapointed that it still somewhat remained simple, but next time I'll have to include a wow factor that extentuates the 3D-ness of this section.
 
-## [TIME TO BUST OUT SOME CREATIVITY]
+## [TIME TO BUST OUT THE PENS]
 Ahhh... the projects section. This made me realize that I lack in the project department, but at the same time this section was mind-blowing and the most fun part of this project. My plan was to showcase my projects as floating game boy cartridges and draw the cover on the cartridges. The most fun part of this was drawing the covers. I took alot of creative inspiration from old games like Pokemon and try to tie in elements of the project and a different art style. 
 
-![This is a placeholder image description](/placeholder-social.jpg)
-*Drawing the covers*
+![timelapse of cover drawing](/cover.gif)
+*Drawing the portfolio cover*
 
 After drawing the covers, I imported them into Blender and added it to the game boy cartridge model, and loaded them onto the site. IT LOOKED SO GOOD. Other than the 3D and art, the section itself was pretty straightforward.
 
@@ -56,4 +60,4 @@ I can call this project done, but I can definitely do better. I was able to thro
 
 I didn't spend much time on this portfolio (2 weeks just about) and am looking to try a different approach in the future. Make a big portfolio with a BIG WOW factor that I can keep adding onto over the years.
 
-Maybe in the next 5 years I can revisit and create a new portfolio with better art and 3d shenanigans. See you then!
+Maybe in the next 2-5 years (I should still be around 👀) I can revisit and create a new portfolio with better art and 3d shenanigans. See you then!
