@@ -1,8 +1,9 @@
 ---
 title: "3D Portfolio: Case Study"
-description: "Lorem ipsum dolor sit amet"
+description: "Case study of 3d Portflio"
 pubDate: "Mar 21 2023"
 heroImage: "/hero.png"
+githubLink: "https://github.com/kkv263/3d_portfolio"
 ---
 
 ## [INTRO: DUSTING OFF THE PORTFOLIO]
