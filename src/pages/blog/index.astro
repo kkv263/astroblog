@@ -1,16 +1,15 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
-
 <style lang="scss">
 	ul {
 		list-style: none;
@@ -25,6 +24,11 @@ const posts = (await getCollection('blog')).sort(
 		padding: 8px;
 		transition: all .3s ease;
 
+		&.disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+
 		&:hover {
 			background-color: #fff;
 			a {
@@ -32,22 +36,23 @@ const posts = (await getCollection('blog')).sort(
 			}
 		}
 
+		img {
+			padding-bottom: 16px;
+			margin-bottom: auto;
+			object-fit: cover;
+			height: 100%;
+		}
+
 		time {
 			font-size: 12px;
 		}
 
-		img {
-			padding-bottom: 16px;
-			margin-bottom: auto;
-		}
-
 		a {
 			display: flex;
+			flex-direction: column;
 			transition: all .3s ease;
 			text-decoration: none;
-			flex-direction: column;
 			height: 100%;
-			justify-content: flex-end;
 		}
 	}
 </style>
@@ -64,7 +69,7 @@ const posts = (await getCollection('blog')).sort(
 			<ul>
 				{
 					posts.map((post) => (
-						<li>
+						<li class={post.data.title.includes('WIP') ? 'disabled' : ''}>
 							<a href={`/blog/${post.slug}/`}>
 								<img src={post.data.heroImage} alt="" />
 								<FormattedDate date={post.data.pubDate} />

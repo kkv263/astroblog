@@ -1,7 +1,7 @@
 ---
 title: "D&D Friend Bot: Case Study"
 description: "WIP Case Study"
-pubDate: "Mar 27 2023"
+pubDate: "Apr 12 2023"
 heroImage: "/friendbot/dicehero.jpg"
 githubLink: "https://github.com/kkv263/friendbot/"
 credit: "Photo by Timothy Dykes on Unsplash"

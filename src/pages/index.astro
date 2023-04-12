@@ -10,7 +10,6 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
-
 <style lang="scss">
 	ul {
 		list-style: none;
@@ -37,14 +36,23 @@ const posts = (await getCollection('blog')).sort(
 			}
 		}
 
+		img {
+			padding-bottom: 16px;
+			margin-bottom: auto;
+			object-fit: cover;
+			height: 100%;
+		}
+
 		time {
 			font-size: 12px;
 		}
 
 		a {
-			display: block;
+			display: flex;
+			flex-direction: column;
 			transition: all .3s ease;
 			text-decoration: none;
+			height: 100%;
 		}
 	}
 </style>
