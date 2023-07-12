@@ -7,17 +7,37 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, githubLink, credit } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, githubLink, credit, liveLink } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
+		<style lang="scss">
 			.title {
 				font-size: 2em;
 				margin: 0.25em 0 0;
+				display: flex;
+				flex-direction:column;
+				align-items: flex-start;
 			}
+
+			.live-link {
+				border: 2px solid #fff;
+				text-decoration: none;
+				display: inline-flex;
+				padding: 4px 16px;
+				color: #000;
+				background-color: #fff;
+				margin-bottom: 12px;
+				font-size: 16px;
+
+				&:hover {
+					background-color: transparent;
+					color: #fff;
+				}
+			}
+
 			hr {
 				border-top: 1px solid #ddd;
 				margin: 1rem 0;
@@ -33,6 +53,11 @@ const { title, description, pubDate, updatedDate, heroImage, githubLink, credit 
 			a {
 				text-decoration: underline;
 			}
+
+			.links {
+				display: flex;
+				flex-direction: column;
+			}
 		</style>
 	</head>
 
@@ -42,7 +67,10 @@ const { title, description, pubDate, updatedDate, heroImage, githubLink, credit 
 			<article>
 				{heroImage && <img src={heroImage} alt="" />}
 				<small>{credit}</small>
-				<h1 class="title">{title}</h1>
+				<h1 class="title">
+					{title}
+					{liveLink && <a class="live-link" href={liveLink}>See it live</a>}
+				</h1>
 				<FormattedDate date={pubDate} />
 				{
 					updatedDate && (
@@ -51,7 +79,7 @@ const { title, description, pubDate, updatedDate, heroImage, githubLink, credit 
 						</div>
 					)
 				}
-				<div>
+				<div class="links">
 					<a href={githubLink}>Github</a>
 				</div>
 				<hr />

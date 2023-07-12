@@ -18,7 +18,10 @@ const blog = defineCollection({
 		githubLink: z.string(),
 		credit: z
 		.string()
-		.optional()
+		.optional(),
+		liveLink: z
+		.string()
+		.optional(),
 	}),
 });
 
