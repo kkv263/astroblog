@@ -1,7 +1,7 @@
 ---
 title: "Mycos: Design Case Study"
 description: "Mycos: Design Case Study"
-pubDate: "Jul 12 2023"
+pubDate: "Jul 11 2023"
 heroImage: "/mycos/mycoshero.jpg"
 githubLink: "https://github.com/kkv263/next.js-ecommerce-snipcart"
 ---
