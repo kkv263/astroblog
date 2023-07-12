@@ -13,6 +13,8 @@ I have a friend that has a small mushroom business that he wants to get into. Ev
 My friend wants to start with something simple, a mascot logo that doubles as a sticker he could ship with his mushrooms to increase brand awareness. Since mushrooms are not the prettiest flower on the block, my approach was to make the mascot look cute and approachable. You can see my design sketches below.
 
 ![Sketches of mycos mascot](/mycos/mycosketch.jpg)
+*Sketch process of the mycos mushroom mascot*
+
 
 I couldn't decide between two color schemes that consisted of green/orange which represents nature and energy vs blue/pink/purple which represents calmness and approachability. My friend really liked the contrast with the pink and the blue as the colors as the contrast made it pop more. 
 
@@ -27,11 +29,13 @@ My friend does have an eye for growing mushrooms and he does make it seem like i
 ## [BEST IN THE MUSHROOM KINGDOM]
 
 ![Best seller section showing mushroom grow kits](/mycos/bestseller.png)
+*Showcasing mushroom show kits!*
 
 ## [OY, STER's MORE?]
 Finally we have the frequently asked questions section. Sometimes doing research is not enough, and a place for faq's to be answered is also a great way for beginners to see what to watch out for. In short, the theme for this landing page is to get people to feel more interested in the mushroom kingdom.
 
 ![FAQ section showing an accordion of questions and answers](/mycos/faq.png)
+*FAQ section featuring an accordion*
 
 ## [SPORE ME THE DETAILS]
 This is it for the time being! Tune in next time as we go over implementation details on the ecommerce site!

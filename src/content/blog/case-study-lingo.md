@@ -18,14 +18,18 @@ Of course one of the main reasons for me to learn Japanese was anime influences.
 Since AI isn't perfect (but damn near perfect), I did run into some "discrepancies" with the results that the AI generated. Below in an example of the anime girl in the hero of the design. Using my art skills I was able to fix the hand and make minor touchups to the foot area. This is really meant as a placeholder until I'm able to go back in and redraw the assets!. The foot area isn't as important since our eyes are usually drawn to the face of the subjects, which the hand is near.
 
 ![Midjourney AI generated comparison with my fix ](/lingo/lingocompare.jpeg)
+*Comparison of AI Generated Image and my fixes*
+
 
 ## [♪ SIMPLE, AND CLEAN IS THE WAY ... ♪ ]
 Because my main focus is with the actual AI application for now... I wanted to keep the design simple. I added a couple of animations to draw the eyes like this rotating "hello" block. It's a pretty nifty animation but also implies the different languages you can use LingoAI for.
 
 ![Hello block animation](/lingo/hello.gif)
+*Animation of 4 different hellos in different languages*
 
-Next section is the features section. The purpose of this was to showcase what you can do with LingoAI. I've kept it simple here as well showing a small video snippet for each feature. I used a phone here to showcase how "convienient" it is and that it's accessible anywhere. I included our orange haired mascot for some personality!
+Next section is the features section. The purpose of this was to showcase what you can do with LingoAI. I've kept it simple here as well showing a small video snippet for each feature. I used a phone here to showcase how "convienient" it is and that it's accessible anywhere. I included our orange haired mascot for some personality! These video snippets were done in Adobe After Effects
 
-![Hello block animation](/lingo/features.gif)
+![Features](/lingo/features.gif)
+*Features of the LingoAI app*
 
 The site really does seem simple even with all of this laid out. I plan on improving this in the feature after I can get more of the actual application moving along! Tune in next time where I talk more about implementation.

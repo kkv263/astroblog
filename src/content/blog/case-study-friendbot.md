@@ -46,7 +46,10 @@ And finally, I tied all the functions and the database together. To better expla
 4. After the session is over, the DM will stop the game and rewards and XP will automatically be allocated per player. This means no more manual logging!
 
 ### Afterword
-Above bolsters the main use of the bot. Outside of games, you can use the bot to manage characters, items, guilds and many other things. Information lookup is also a nice feature for use.
+Above bolsters the main use of the bot. Outside of games, you can use the bot to manage characters, items, guilds and many other things. Information lookup is also a nice feature for use. Here is an example of a character lookup in action!
+
+![Rough diagram of data for friend bot](/friendbot/discord.png)
+*Blurred out some details. Character lookup of a specific character.*
 
 ## [SO LONG, FRIEND]
 Unfortunately, I fell out of love for D&D since I got busier and did not enjoy the 4+ hour commitments per session. However, I learned alot from this project I developed over 2+ years. I've burnt out and transferred maintenance to a friend who still manages it to this day. 
