@@ -1,4 +1,5 @@
 ---
+import { getEntries } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -7,7 +8,9 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, githubLink, credit, liveLink } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, githubLink, credit, liveLink, relatedPosts } = Astro.props;
+const relatedEntries = await getEntries(relatedPosts || []);
+
 ---
 
 <html lang="en">
@@ -58,6 +61,52 @@ const { title, description, pubDate, updatedDate, heroImage, githubLink, credit,
 				display: flex;
 				flex-direction: column;
 			}
+
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	li {
+		border: 1px solid #fff;
+		padding: 8px;
+		transition: all .3s ease;
+
+		&.disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+
+		&:hover {
+			background-color: #fff;
+			a {
+				color: #000;
+			}
+		}
+
+		img {
+			padding-bottom: 16px;
+			margin-bottom: auto;
+			object-fit: cover;
+			height: 100%;
+		}
+
+		time {
+			font-size: 12px;
+		}
+
+		a {
+			display: flex;
+			flex-direction: column;
+			transition: all .3s ease;
+			text-decoration: none;
+			height: 100%;
+		}
+	}
 		</style>
 	</head>
 
@@ -85,6 +134,21 @@ const { title, description, pubDate, updatedDate, heroImage, githubLink, credit,
 				<hr />
 				<slot />
 			</article>
+			<hr>
+			<section class="related">
+				<h2>RELATED POSTS</h2>
+				<ul class="related__list">
+					{relatedEntries.length > 0 && relatedEntries.map(post => (
+						<li class={post.data.title.includes('WIP') ? 'disabled' : ''}>
+							<a href={`/blog/${post.slug}/`}>
+								<img src={post.data.heroImage} alt="" />
+								<FormattedDate date={post.data.pubDate} />
+								<div>{post.data.title}</div>
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
 		</main>
 		<Footer />
 	</body>

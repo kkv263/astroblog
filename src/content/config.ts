@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
@@ -22,6 +22,7 @@ const blog = defineCollection({
 		liveLink: z
 		.string()
 		.optional(),
+		relatedPosts: z.array(reference('blog')).optional(),
 	}),
 });
 
