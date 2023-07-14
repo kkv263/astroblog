@@ -21,7 +21,7 @@ In short I colored the cube yellow and attached a number on each side using an a
 ![Spline 3d editor](/friendbot/spline.jpeg)
 *How the spline 3d editor looks like -- building out my die!*
 
-I ran into a couple of challenges with the die when I embedded into my code. The first one was that the die would sometimes roll out of the screen. I added some transparent walls so that this wouldn't happen. Secondly there were some dragging issues on mobile that we will touch on later. 
+I ran into a couple of challenges with the die when I embedded into my code. The first one was that the die would sometimes roll out of the screen. I added some transparent walls so that this wouldn't happen. Secondly there were some dragging issues on mobile that I couldn't quite figure out with Spline. Spline's scene interaction settings lets you either enable page scroll or not. This does not work well with the drag and drop functionality that Spline provides. Since scrolling and drag/dropping happens with our thumbs only one interaction can happen at a time. 
 
 Other than that the hero is pretty straightforward. The content on the left draws the user in personally with casual language (hey friend,) and some off the bat items to get the user's hooked.
 
